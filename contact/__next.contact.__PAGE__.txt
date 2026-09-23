@@ -1,0 +1,43 @@
+1:"$Sreact.fragment"
+2:I[49005,["/soworkfit/_next/static/chunks/2dz-r64gbcu62.js","/soworkfit/_next/static/chunks/13m93k8i8xo3k.js","/soworkfit/_next/static/chunks/2guqn32jzeda0.js"],"Reveal"]
+3:I[22016,["/soworkfit/_next/static/chunks/2dz-r64gbcu62.js","/soworkfit/_next/static/chunks/13m93k8i8xo3k.js","/soworkfit/_next/static/chunks/2guqn32jzeda0.js"],""]
+4:I[97367,["/soworkfit/_next/static/chunks/0h2qsuyze9ds1.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+9:I[97367,["/soworkfit/_next/static/chunks/0h2qsuyze9ds1.js"],"ViewportBoundary"]
+a:I[97367,["/soworkfit/_next/static/chunks/0h2qsuyze9ds1.js"],"MetadataBoundary"]
+8:X
+22:X
+22:C
+0:{"buildId":"l3vrDm0bGuni-GfQodCRC","data":[{"rsc":["$","$1","c",{"children":[[["$","header",null,{"className":"relative isolate overflow-hidden border-b hairline","children":[["$","svg",null,{"viewBox":"0 0 600 600","fill":"none","aria-hidden":true,"className":"pointer-events-none absolute -right-[20rem] -top-[16rem] w-[42rem] opacity-30","children":[["$","circle",null,{"cx":"300","cy":"300","r":"264","stroke":"url(#halo)","strokeWidth":"1.5","strokeLinecap":"round","strokeDasharray":"1290 370","strokeDashoffset":"-140"}],["$","defs",null,{"children":["$","linearGradient",null,{"id":"halo","x1":"0","y1":"0","x2":"600","y2":"600","children":[["$","stop",null,{"stopColor":"#e6cfa3","stopOpacity":"0.9"}],["$","stop",null,{"offset":"0.5","stopColor":"#c29a5e","stopOpacity":"0.35"}],["$","stop",null,{"offset":"1","stopColor":"#c29a5e","stopOpacity":"0"}]]}]}]]}],["$","div",null,{"className":"container-sw pb-16 pt-36 md:pb-20 md:pt-44","children":["$","$L2",null,{"children":[["$","p",null,{"className":"label-text flex items-center gap-3 text-bronze","children":[["$","svg",null,{"viewBox":"0 0 24 14","fill":"none","aria-hidden":true,"className":"w-3.5 -rotate-90","children":[["$","path",null,{"d":"M2 1l10 5L22 1","stroke":"url(#chv)","strokeWidth":"2"}],["$","path",null,{"d":"M5 8l7 4 7-4","stroke":"url(#chv)","strokeWidth":"2","opacity":"0.5"}],["$","defs",null,{"children":["$","linearGradient",null,{"id":"chv","x1":"0","y1":"0","x2":"24","y2":"14","children":[["$","stop",null,{"stopColor":"#e6cfa3"}],["$","stop",null,{"offset":"1","stopColor":"#9a7845"}]]}]}]]}],"Contact"]}],["$","h1",null,{"className":"display-text mt-6 max-w-4xl text-[clamp(2.6rem,7.5vw,5.2rem)]","children":["Une question ?",["$","br",null,{}],["$","span",null,{"className":"text-metal","children":"Parlons-en."}]]}],["$","p",null,{"className":"mt-7 max-w-xl text-base leading-relaxed text-sand md:text-lg","children":"Le plus simple reste de réserver directement votre séance offerte — le coach vous rappelle pour confirmer."}]]}]}]]}],["$","section",null,{"children":["$","div",null,{"className":"container-sw grid gap-12 py-20 md:py-28 lg:grid-cols-2","children":[["$","$L2",null,{"children":[["$","h2",null,{"className":"display-text text-3xl","children":["Réserver, ",["$","span",null,{"className":"text-metal","children":"c'est plus rapide."}]]}],["$","p",null,{"className":"mt-5 max-w-md text-base leading-relaxed text-sand","children":"Choisissez votre coaching, vos disponibilités, et le coach revient vers vous. Sans engagement."}],["$","div",null,{"className":"mt-8","children":["$","$L3",null,{"href":"/reserver","className":"group inline-flex items-center justify-center gap-2.5 px-7 py-4 label-text transition-all duration-300 will-change-transform bg-[linear-gradient(150deg,#e6cfa3_0%,#c29a5e_45%,#9a7845_100%)] text-noir hover:brightness-110 hover:-translate-y-0.5 active:translate-y-0 ","children":["Réserver ma séance offerte",["$","span",null,{"aria-hidden":true,"className":"transition-transform duration-300 group-hover:translate-x-1","children":"→"}]]}]}]]}],["$","$L2",null,{"delay":0.1,"children":["$","div",null,{"className":"border hairline p-8","children":[["$","p",null,{"className":"label-text text-bronze","children":"Coordonnées"}],["$","p",null,{"className":"mt-4 text-sm leading-relaxed text-sand","children":"Les coordonnées directes (téléphone, WhatsApp, e-mail) seront publiées ici très prochainement. En attendant, la réservation en ligne reste ouverte."}]]}]}]]}]}]],[["$","script","script-0",{"src":"/soworkfit/_next/static/chunks/2guqn32jzeda0.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L9",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Contact · SO WORKFIT"}],["$","meta","1",{"name":"description","content":"Contacter SO WORKFIT — questions, réservations, informations sur les coachings. Première séance offerte."}],["$","meta","2",{"name":"robots","content":"index, follow"}],["$","meta","3",{"property":"og:title","content":"SO WORKFIT — Coaching sportif personnalisé"}],["$","meta","4",{"property":"og:description","content":"Coaching sportif personnalisé avec Soufiane Benchekh — 15 ans d'expérience. Coaching privé, collectif, enfants et préparation physique football. Première séance offerte."}],"$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d"]}]}]}],"$L1e"]}],"isPartial":"$@1f","staleTime":"$8","varyParams":null},{"rsc":"$L20","isPartial":"$@21","staleTime":"$8","varyParams":"$22"}],"isUpgradeableISRFallback":false,"a":"$@23","rootVaryParams":null,"needsRuntimeRequest":"$@24"}
+25:I[27201,["/soworkfit/_next/static/chunks/0h2qsuyze9ds1.js"],"IconMark"]
+26:I[39756,["/soworkfit/_next/static/chunks/0h2qsuyze9ds1.js"],"default"]
+27:I[37457,["/soworkfit/_next/static/chunks/0h2qsuyze9ds1.js"],"default"]
+6:null
+b:["$","meta","5",{"property":"og:url","content":"https://soworkfit.example"}]
+c:["$","meta","6",{"property":"og:site_name","content":"SO WORKFIT"}]
+d:["$","meta","7",{"property":"og:locale","content":"fr_FR"}]
+e:["$","meta","8",{"property":"og:image","content":"https://soworkfit.example/opengraph-image?d5dd7d64e5c771ae"}]
+f:["$","meta","9",{"property":"og:image:type","content":"image/png"}]
+10:["$","meta","10",{"property":"og:image:width","content":"1200"}]
+11:["$","meta","11",{"property":"og:image:height","content":"630"}]
+12:["$","meta","12",{"property":"og:image:alt","content":"SO WORKFIT — Coaching sportif personnalisé"}]
+13:["$","meta","13",{"property":"og:type","content":"website"}]
+14:["$","meta","14",{"name":"twitter:card","content":"summary_large_image"}]
+15:["$","meta","15",{"name":"twitter:title","content":"SO WORKFIT — Coaching sportif personnalisé"}]
+16:["$","meta","16",{"name":"twitter:description","content":"Coaching sportif personnalisé avec Soufiane Benchekh — 15 ans d'expérience. Coaching privé, collectif, enfants et préparation physique football. Première séance offerte."}]
+17:["$","meta","17",{"name":"twitter:image","content":"https://soworkfit.example/opengraph-image?d5dd7d64e5c771ae"}]
+18:["$","meta","18",{"name":"twitter:image:alt","content":"SO WORKFIT — Coaching sportif personnalisé"}]
+19:["$","meta","19",{"name":"twitter:image:type","content":"image/png"}]
+1a:["$","meta","20",{"name":"twitter:image:width","content":"1200"}]
+1b:["$","meta","21",{"name":"twitter:image:height","content":"630"}]
+1c:["$","link","22",{"rel":"icon","href":"/soworkfit/icon.svg?icon.3k7jpxoru0-ng.svg","sizes":"any","type":"image/svg+xml"}]
+1d:["$","$L25","23",{}]
+1e:["$","meta",null,{"name":"next-size-adjust","content":""}]
+20:["$","$1","c",{"children":[null,["$","$L26",null,{"parallelRouterKey":"children","template":["$","$L27",null,{}]}]]}]
+24:true
+8:300
+8:C
+23:0
+1f:"$undefined"
+21:"$undefined"
+7:"$undefined"

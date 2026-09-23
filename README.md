@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SO WORKFIT — Site officiel
 
-## Getting Started
+Site premium du coaching sportif SO WORKFIT (Soufiane Benchekh, 15 ans
+d'expérience). Next.js 16 · TypeScript · Tailwind CSS 4 · Framer Motion.
 
-First, run the development server:
+## Démarrer
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # build de production (100 % statique)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## À compléter avant mise en ligne
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Tout est centralisé dans **`src/lib/site.ts`** — rien d'autre à toucher :
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Champ | Effet |
+|---|---|
+| `city`, `address` | SEO local + page contact + structured data |
+| `url` | URL de production (sitemap, OG, robots) |
+| `contact.phone / whatsapp / email / instagram` | Page contact, footer, et fin du parcours de réservation (envoi WhatsApp / e-mail pré-rempli) |
+| `booking.*` | URLs Calendly / Cal.com par coaching — dès qu'une URL est renseignée, l'étape finale de `/reserver` propose le vrai choix de créneau |
 
-## Learn More
+Tant que ces champs sont vides, le site n'affiche **rien d'inventé** :
+les sections concernées montrent un état honnête ("à venir").
 
-To learn more about Next.js, take a look at the following resources:
+## Photos & logo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Des photos **temporaires** (Unsplash, libres d'usage) sont intégrées et
+étalonnées automatiquement (composant `SitePhoto`). Pour passer aux vraies
+photos SO WORKFIT : écraser les fichiers de `/public/photos/` en gardant
+les mêmes noms — voir le tableau dans `public/brand/README.md`. Le logo
+officiel se dépose dans `/public/brand/`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Résultats & témoignages
 
-## Deploy on Vercel
+`src/components/home/Transformations.tsx` et `src/app/resultats/page.tsx`
+contiennent les structures avant/après et témoignages, volontairement
+vides : n'y mettre que de vrais parcours et de vrais avis.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Design system
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Palette (logo) : noir chaud `#0b0a08`, anthracite, ivoire `#f1ece1`,
+  bronze `#c29a5e`, champagne `#e6cfa3` — définie dans `globals.css` (@theme).
+- Typos : Anton (display), Instrument Sans (texte), Instrument Serif
+  italique (accents humains).
+- Signatures graphiques : halo/arc et chevron (`src/components/ui/Marks.tsx`),
+  texte métal (`.text-metal`), grain photographique global.
+- Animations : Framer Motion, `prefers-reduced-motion` respecté partout.

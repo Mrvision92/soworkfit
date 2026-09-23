@@ -1,26 +1,150 @@
 @import "tailwindcss";
 
+/* ============================================================
+   SO WORKFIT — Design system
+   Palette extraite du logo : noir chaud, anthracite, ivoire,
+   bronze / champagne métallique.
+   ============================================================ */
+
+@theme {
+  /* Couleurs */
+  --color-noir: #0b0a08;
+  --color-coal: #14110d;
+  --color-ash: #1e1a14;
+  --color-ivory: #f1ece1;
+  --color-sand: #a89c88;
+  --color-bronze: #c29a5e;
+  --color-champagne: #e6cfa3;
+  --color-bronze-deep: #7d6134;
+
+  /* Typographies (variables injectées par next/font dans layout.tsx) */
+  --font-display: var(--font-anton);
+  --font-sans: var(--font-instrument-sans);
+  --font-serif: var(--font-instrument-serif);
+
+  --tracking-label: 0.22em;
+
+  --animate-marquee: marquee 36s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-noir);
+  color: var(--color-ivory);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-bronze);
+  color: var(--color-noir);
+}
+
+/* ------------------------------------------------------------
+   Utilitaires signature
+   ------------------------------------------------------------ */
+
+@utility container-sw {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 76rem;
+  padding-inline: 1.25rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* Titres display condensés */
+@utility display-text {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  /* 1.02 : laisse respirer les capitales accentuées françaises (À, É) */
+  line-height: 1.02;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+
+/* Petit label sur-tracké (kicker) */
+@utility label-text {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+/* Accent humain — serif italique */
+@utility serif-accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Texte métal champagne (signature logo) */
+@utility text-metal {
+  background-image: linear-gradient(
+    165deg,
+    #efdcb2 8%,
+    #c29a5e 38%,
+    #8f7040 62%,
+    #d9bd8c 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Filet horizontal discret */
+@utility hairline {
+  border-color: color-mix(in srgb, var(--color-ivory) 10%, transparent);
+}
+
+/* Grain photographique global */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Halo bronze radial (fond de sections clés) */
+@utility glow-bronze {
+  background-image: radial-gradient(
+    55% 60% at 50% 100%,
+    color-mix(in srgb, var(--color-bronze) 14%, transparent),
+    transparent 70%
+  );
+}
+
+/* Focus visible accessible */
+:focus-visible {
+  outline: 2px solid var(--color-bronze);
+  outline-offset: 3px;
 }

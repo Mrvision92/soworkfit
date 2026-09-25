@@ -34,9 +34,10 @@ export function Hero() {
           transition: { duration: 0.8, delay: 0.55 + i * 0.12, ease },
         };
 
+  // 3 lignes verrouillées (insécables) — jamais de retour à la ligne parasite
   const lines = [
-    <>Un coaching qui</>,
-    <>s&apos;adapte à</>,
+    <>Un coaching</>,
+    <>qui s&apos;adapte à</>,
     <span key="m" className="text-metal">
       votre objectif.
     </span>,
@@ -69,11 +70,11 @@ export function Hero() {
           </motion.p>
 
           {/* Titre révélé ligne par ligne (masque) */}
-          <h1 className="display-text mt-6 text-[clamp(2.7rem,7.2vw,5.6rem)]">
+          <h1 className="display-text mt-6 text-[clamp(2.6rem,6.6vw,5.1rem)]">
             {lines.map((l, i) => (
               <span
                 key={i}
-                className="-mb-[0.12em] block overflow-hidden pb-[0.12em]"
+                className="-mb-[0.12em] block overflow-hidden whitespace-nowrap pb-[0.12em]"
               >
                 <motion.span
                   className="block"

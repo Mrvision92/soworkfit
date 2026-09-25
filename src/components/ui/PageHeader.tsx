@@ -14,7 +14,7 @@ export function PageHeader({
     <header className="relative isolate overflow-hidden border-b hairline">
       <Halo className="pointer-events-none absolute -right-[20rem] -top-[16rem] w-[42rem] opacity-30" />
       <div className="container-sw pb-16 pt-36 md:pb-20 md:pt-44">
-        <Reveal>
+        <Reveal punch>
           <p className="label-text flex items-center gap-3 text-bronze">
             <Chevron className="w-3.5 -rotate-90" />
             {kicker}

@@ -1,5 +1,6 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
+import { DrawLine } from "@/components/ui/DrawLine";
 
 const steps = [
   {
@@ -40,10 +41,11 @@ export function Methode() {
           lede="Le coaching ne s'arrête pas quand la séance se termine. Le suivi fait partie du service."
         />
 
-        <ol className="mt-14 grid gap-px border hairline bg-ivory/8 sm:grid-cols-2 lg:grid-cols-4">
+        <DrawLine className="mt-14 mb-6" />
+        <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
-            <Reveal key={s.num} delay={i * 0.08} className="bg-coal">
-              <li className="group h-full p-7 transition-colors duration-500 hover:bg-ash md:p-8">
+            <Reveal key={s.num} delay={i * 0.08} className="h-full">
+              <li className="group h-full rounded-2xl bg-coal p-7 shadow-[0_2px_16px_rgba(29,29,31,0.05)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(29,29,31,0.08)] md:p-8">
                 <span className="display-text text-metal text-4xl">
                   {s.num}
                 </span>

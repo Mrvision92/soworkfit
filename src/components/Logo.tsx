@@ -48,8 +48,8 @@ export function Monogram({ className = "w-12" }: { className?: string }) {
       </text>
       <defs>
         <linearGradient id="mg" x1="0" y1="0" x2="64" y2="64">
-          <stop stopColor="#e6cfa3" />
-          <stop offset="1" stopColor="#8f7040" />
+          <stop stopColor="#bd8b4a" />
+          <stop offset="1" stopColor="#6b4e26" />
         </linearGradient>
       </defs>
     </svg>

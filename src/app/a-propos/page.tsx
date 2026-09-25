@@ -57,13 +57,16 @@ export default function AProposPage() {
               </p>
             </div>
 
-            <ul className="mt-12 grid gap-px border hairline bg-ivory/8 sm:grid-cols-3">
+            <ul className="mt-12 grid gap-4 sm:grid-cols-3">
               {[
                 [`${site.experienceYears} ans`, "d'expérience"],
                 ["4", "types de coaching"],
                 ["1", "méthode : la vôtre"],
               ].map(([big, small]) => (
-                <li key={small} className="bg-noir p-6 text-center">
+                <li
+                  key={small}
+                  className="rounded-2xl bg-coal p-6 text-center shadow-[0_2px_16px_rgba(29,29,31,0.05)]"
+                >
                   <p className="display-text text-metal text-3xl">{big}</p>
                   <p className="label-text mt-2 text-ivory/50">{small}</p>
                 </li>

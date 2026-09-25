@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { SitePhoto } from "@/components/ui/SitePhoto";
 import { Button } from "@/components/ui/Button";
+import { FieldLines } from "@/components/football/FieldLines";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -18,27 +19,8 @@ const axes = [
   ["Coordination", "Appuis, agilité, changements de direction"],
   ["Technique", "Qualité de geste sous fatigue"],
   ["Endurance", "Tenir l'intensité sur tout le match"],
-  ["Remise à niveau", "Retour de blessure ou de coupure"],
+  ["Vista", "Lecture du jeu et prise de décision"],
 ];
-
-/** Lignes de terrain — signature graphique de la section football. */
-function FieldLines() {
-  return (
-    <svg
-      viewBox="0 0 1200 600"
-      aria-hidden
-      className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.07]"
-      preserveAspectRatio="xMidYMid slice"
-    >
-      <g stroke="#e6cfa3" strokeWidth="1.5" fill="none">
-        <line x1="600" y1="0" x2="600" y2="600" />
-        <circle cx="600" cy="300" r="110" />
-        <rect x="0" y="140" width="180" height="320" />
-        <rect x="1020" y="140" width="180" height="320" />
-      </g>
-    </svg>
-  );
-}
 
 export default function FootballPage() {
   return (
@@ -72,10 +54,10 @@ export default function FootballPage() {
               </>
             }
           />
-          <div className="mt-14 grid gap-px border hairline bg-ivory/8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {axes.map(([title, text], i) => (
-              <Reveal key={title} delay={i * 0.06} className="bg-coal">
-                <div className="group h-full p-7 transition-colors duration-500 hover:bg-ash md:p-8">
+              <Reveal key={title} delay={i * 0.06} className="h-full">
+                <div className="group h-full rounded-2xl bg-coal p-7 shadow-[0_2px_16px_rgba(29,29,31,0.05)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(29,29,31,0.08)] md:p-8">
                   <p className="display-text text-bronze/50 transition-colors group-hover:text-bronze">
                     {String(i + 1).padStart(2, "0")}
                   </p>

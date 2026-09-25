@@ -40,13 +40,13 @@ export default function CoachingPage() {
                   <span className="text-metal">pour vous seul.</span>
                 </>
               }
-              lede="Perte de poids, transformation physique, remise en forme, prise de muscle, reprise du sport : chaque séance sert votre objectif, pas celui d'un plan générique."
+              lede="Perte de poids, prise de masse, remise en forme, performance ou rééducation : chaque séance sert votre objectif, pas celui d'un plan générique."
             />
             <Reveal delay={0.1}>
               <ul className="mt-10 space-y-4 border-t hairline pt-8">
                 {[
                   "Accompagnement entièrement personnalisé",
-                  "Programme adapté à votre niveau de départ",
+                  "Performance, rééducation, reprise : programme adapté à votre point de départ",
                   "Suivi régulier, objectifs mesurables",
                   "Programme alimentaire offert jusqu'à la fin de l'année",
                 ].map((p) => (

@@ -49,14 +49,17 @@ export default function EnfantsPage() {
       <section>
         <div className="container-sw py-16 md:py-20">
           <Reveal>
-            <ul className="grid grid-cols-2 gap-px border hairline bg-ivory/8 md:grid-cols-4">
+            <ul className="grid grid-cols-2 gap-4 md:grid-cols-4">
               {[
                 ["7–15", "ans"],
                 ["Tous", "niveaux"],
                 ["Encadrement", "adapté à l'âge"],
                 [`${site.experienceYears} ans`, "d'expérience"],
               ].map(([big, small]) => (
-                <li key={small} className="bg-noir p-6 text-center md:p-8">
+                <li
+                  key={small}
+                  className="rounded-2xl bg-coal p-6 text-center shadow-[0_2px_16px_rgba(29,29,31,0.05)] md:p-8"
+                >
                   <p className="display-text text-metal text-3xl md:text-4xl">
                     {big}
                   </p>
@@ -90,10 +93,10 @@ export default function EnfantsPage() {
             </Reveal>
           </div>
 
-          <div className="grid gap-px self-start border hairline bg-ivory/8 sm:grid-cols-2">
+          <div className="grid gap-4 self-start sm:grid-cols-2">
             {piliers.map((p, i) => (
-              <Reveal key={p.title} delay={i * 0.07} className="bg-coal">
-                <div className="h-full p-7 transition-colors duration-500 hover:bg-ash">
+              <Reveal key={p.title} delay={i * 0.07} className="h-full">
+                <div className="h-full rounded-2xl bg-coal p-7 shadow-[0_2px_16px_rgba(29,29,31,0.05)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(29,29,31,0.08)]">
                   <h3 className="display-text text-xl text-champagne">
                     {p.title}
                   </h3>

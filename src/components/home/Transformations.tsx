@@ -26,7 +26,7 @@ export function Transformations() {
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {[1, 2].map((n, i) => (
             <Reveal key={n} delay={i * 0.1}>
-              <figure className="border hairline">
+              <figure className="overflow-hidden rounded-3xl bg-coal shadow-[0_2px_16px_rgba(29,29,31,0.05)]">
                 <div className="grid grid-cols-2 gap-px bg-ivory/8">
                   <MediaPlaceholder label="Avant" className="aspect-[3/4]" />
                   <MediaPlaceholder label="Après" className="aspect-[3/4]" />

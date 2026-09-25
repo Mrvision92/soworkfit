@@ -1,28 +1,29 @@
 @import "tailwindcss";
 
 /* ============================================================
-   SO WORKFIT — Design system
-   Palette extraite du logo : noir chaud, anthracite, ivoire,
-   bronze / champagne métallique.
+   SO WORKFIT — Design system (version claire, référence Apple)
+   Fond blanc chaud, texte quasi-noir, bronze en accent précis.
+   Les noms de tokens historiques sont conservés :
+   noir = fond page · coal = surfaces · ash = hover ·
+   ivory = texte principal · sand = texte secondaire.
    ============================================================ */
 
 @theme {
   /* Couleurs */
-  --color-noir: #0b0a08;
-  --color-coal: #14110d;
-  --color-ash: #1e1a14;
-  --color-ivory: #f1ece1;
-  --color-sand: #a89c88;
-  --color-bronze: #c29a5e;
-  --color-champagne: #e6cfa3;
-  --color-bronze-deep: #7d6134;
+  --color-noir: #f7f5f0;
+  --color-coal: #ffffff;
+  --color-ash: #efeadf;
+  --color-ivory: #1d1d1f;
+  --color-sand: #6e6e73;
+  --color-bronze: #a5793b;
+  --color-champagne: #7d5c2e;
+  --color-bronze-deep: #8a6432;
 
   /* Typographies (variables injectées par next/font dans layout.tsx) */
-  --font-display: var(--font-anton);
   --font-sans: var(--font-instrument-sans);
   --font-serif: var(--font-instrument-serif);
 
-  --tracking-label: 0.22em;
+  --tracking-label: 0.12em;
 
   --animate-marquee: marquee 36s linear infinite;
 
@@ -37,7 +38,7 @@
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
@@ -60,7 +61,7 @@ body {
 
 ::selection {
   background: var(--color-bronze);
-  color: var(--color-noir);
+  color: #ffffff;
 }
 
 /* ------------------------------------------------------------
@@ -78,14 +79,12 @@ body {
   }
 }
 
-/* Titres display condensés */
+/* Titres — grands, gras, bas-de-casse, tracking serré (façon Apple) */
 @utility display-text {
-  font-family: var(--font-display);
-  text-transform: uppercase;
-  /* 1.02 : laisse respirer les capitales accentuées françaises (À, É) */
-  line-height: 1.02;
-  letter-spacing: 0.01em;
-  font-weight: 400;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.022em;
+  line-height: 1.05;
 }
 
 /* Petit label sur-tracké (kicker) */
@@ -104,14 +103,13 @@ body {
   font-weight: 400;
 }
 
-/* Texte métal champagne (signature logo) */
+/* Dégradé bronze sur mot-clé (lisible sur fond clair) */
 @utility text-metal {
   background-image: linear-gradient(
-    165deg,
-    #efdcb2 8%,
-    #c29a5e 38%,
-    #8f7040 62%,
-    #d9bd8c 90%
+    150deg,
+    #bd8b4a 0%,
+    #8a6432 55%,
+    #6b4e26 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -120,25 +118,14 @@ body {
 
 /* Filet horizontal discret */
 @utility hairline {
-  border-color: color-mix(in srgb, var(--color-ivory) 10%, transparent);
+  border-color: color-mix(in srgb, var(--color-ivory) 12%, transparent);
 }
 
-/* Grain photographique global */
-.grain::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 90;
-  pointer-events: none;
-  opacity: 0.05;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* Halo bronze radial (fond de sections clés) */
+/* Halo bronze radial très léger (fond de sections clés) */
 @utility glow-bronze {
   background-image: radial-gradient(
     55% 60% at 50% 100%,
-    color-mix(in srgb, var(--color-bronze) 14%, transparent),
+    color-mix(in srgb, var(--color-bronze) 10%, transparent),
     transparent 70%
   );
 }
@@ -147,4 +134,36 @@ body {
 :focus-visible {
   outline: 2px solid var(--color-bronze);
   outline-offset: 3px;
+}
+
+/* ------------------------------------------------------------
+   Animations continues — actives uniquement si l'utilisateur
+   n'a pas demandé de réduire les animations.
+   ------------------------------------------------------------ */
+
+@keyframes kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .anim-marquee {
+    animation: marquee 28s linear infinite;
+  }
+  .anim-kenburns {
+    animation: kenburns 22s ease-in-out infinite alternate;
+  }
+  .anim-spin-slow {
+    animation: spin-slow 70s linear infinite;
+  }
 }

@@ -15,6 +15,7 @@ export function SectionHeading({
   const centered = align === "center";
   return (
     <Reveal
+      punch
       className={`max-w-3xl ${centered ? "mx-auto text-center" : ""}`}
     >
       <p

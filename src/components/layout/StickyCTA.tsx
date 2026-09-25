@@ -34,7 +34,7 @@ export function StickyCTA() {
         >
           <Link
             href="/reserver"
-            className="label-text flex items-center justify-center gap-2 bg-[linear-gradient(150deg,#e6cfa3,#c29a5e_55%,#9a7845)] px-6 py-4 text-noir shadow-[0_-8px_30px_rgba(0,0,0,0.5)]"
+            className="flex items-center justify-center gap-2 rounded-full bg-bronze px-6 py-4 text-[0.95rem] font-semibold text-white shadow-[0_10px_30px_rgba(29,29,31,0.18)]"
           >
             Réserver ma séance offerte →
           </Link>

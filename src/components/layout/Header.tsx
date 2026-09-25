@@ -69,7 +69,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <Link
             href="/reserver"
-            className="label-text hidden whitespace-nowrap border border-bronze/60 px-5 py-3 text-champagne transition-colors duration-300 hover:bg-bronze hover:text-noir sm:block"
+            className="hidden whitespace-nowrap rounded-full bg-bronze px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-bronze-deep sm:block"
           >
             Séance offerte
           </Link>
@@ -106,7 +106,7 @@ export function Header() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 flex flex-col bg-noir lg:hidden"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(60%_45%_at_50%_115%,rgba(194,154,94,0.16),transparent_70%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(60%_45%_at_50%_115%,rgba(165,121,59,0.10),transparent_70%)]" />
             <nav
               aria-label="Navigation mobile"
               className="container-sw relative flex flex-1 flex-col justify-center"
@@ -140,7 +140,7 @@ export function Header() {
               >
                 <Link
                   href="/reserver"
-                  className="label-text inline-block bg-bronze px-7 py-4 text-noir"
+                  className="inline-block rounded-full bg-bronze px-7 py-4 font-semibold text-white"
                 >
                   Réserver ma séance offerte →
                 </Link>

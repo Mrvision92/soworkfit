@@ -17,7 +17,7 @@ const creneaux = [
 const steps = ["Coaching", "Format", "Disponibilités", "Coordonnées", "Récapitulatif"];
 
 const inputCls =
-  "w-full border border-ivory/15 bg-coal px-4 py-3.5 text-ivory placeholder:text-ivory/30 focus:border-bronze focus:outline-none transition-colors";
+  "w-full rounded-xl border border-ivory/15 bg-coal px-4 py-3.5 text-ivory placeholder:text-ivory/35 focus:border-bronze focus:outline-none transition-colors";
 
 export function BookingFlow() {
   const params = useSearchParams();
@@ -115,10 +115,10 @@ export function BookingFlow() {
                   type="button"
                   onClick={() => setCoaching(c.id)}
                   aria-pressed={coaching === c.id}
-                  className={`border p-6 text-left transition-all duration-300 ${
+                  className={`rounded-2xl border p-6 text-left transition-all duration-300 ${
                     coaching === c.id
-                      ? "border-bronze bg-ash"
-                      : "border-ivory/15 hover:border-ivory/40"
+                      ? "border-bronze bg-coal shadow-[0_6px_24px_rgba(29,29,31,0.08)]"
+                      : "border-ivory/15 bg-coal/60 hover:border-ivory/40"
                   }`}
                 >
                   <span className="label-text text-bronze/70">{c.num}</span>
@@ -152,10 +152,10 @@ export function BookingFlow() {
                   type="button"
                   onClick={() => setFormat(id)}
                   aria-pressed={format === id}
-                  className={`border p-6 text-left transition-all duration-300 ${
+                  className={`rounded-2xl border p-6 text-left transition-all duration-300 ${
                     format === id
-                      ? "border-bronze bg-ash"
-                      : "border-ivory/15 hover:border-ivory/40"
+                      ? "border-bronze bg-coal shadow-[0_6px_24px_rgba(29,29,31,0.08)]"
+                      : "border-ivory/15 bg-coal/60 hover:border-ivory/40"
                   }`}
                 >
                   <span className="display-text block text-xl text-ivory">
@@ -191,10 +191,10 @@ export function BookingFlow() {
                         active ? d.filter((x) => x !== c) : [...d, c],
                       )
                     }
-                    className={`label-text border px-5 py-3.5 transition-all duration-300 ${
+                    className={`label-text rounded-full border px-5 py-3.5 transition-all duration-300 ${
                       active
-                        ? "border-bronze bg-bronze text-noir"
-                        : "border-ivory/15 text-ivory hover:border-ivory/40"
+                        ? "border-bronze bg-bronze text-white"
+                        : "border-ivory/15 bg-coal/60 text-ivory hover:border-ivory/40"
                     }`}
                   >
                     {c}
@@ -271,7 +271,7 @@ export function BookingFlow() {
             <h2 className="display-text mb-8 text-3xl md:text-4xl">
               C&apos;est <span className="text-metal">noté.</span>
             </h2>
-            <dl className="space-y-3 border hairline p-6 text-sm md:p-8">
+            <dl className="space-y-3 rounded-2xl bg-coal p-6 text-sm shadow-[0_2px_16px_rgba(29,29,31,0.05)] md:p-8">
               {[
                 ["Coaching", selected.title],
                 ["Format", format === "appel" ? "Appel découverte" : "Séance offerte"],
@@ -296,7 +296,7 @@ export function BookingFlow() {
                   href={bookingUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="label-text block bg-[linear-gradient(150deg,#e6cfa3,#c29a5e_55%,#9a7845)] px-7 py-4 text-center text-noir"
+                  className="block rounded-full bg-bronze px-7 py-4 text-center font-semibold text-white transition-colors hover:bg-bronze-deep"
                 >
                   Choisir ma date et mon heure →
                 </a>
@@ -307,7 +307,7 @@ export function BookingFlow() {
                       href={`https://wa.me/${site.contact.whatsapp}?text=${encodeURIComponent(recap)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="label-text block bg-[linear-gradient(150deg,#e6cfa3,#c29a5e_55%,#9a7845)] px-7 py-4 text-center text-noir"
+                      className="block rounded-full bg-bronze px-7 py-4 text-center font-semibold text-white transition-colors hover:bg-bronze-deep"
                     >
                       Envoyer ma demande sur WhatsApp →
                     </a>
@@ -317,13 +317,13 @@ export function BookingFlow() {
                       href={`mailto:${site.contact.email}?subject=${encodeURIComponent(
                         `Séance offerte — ${selected.title}`,
                       )}&body=${encodeURIComponent(recap)}`}
-                      className="label-text block border border-bronze/60 px-7 py-4 text-center text-champagne"
+                      className="block rounded-full border border-bronze/60 px-7 py-4 text-center font-semibold text-champagne transition-colors hover:bg-bronze hover:text-white"
                     >
                       Envoyer ma demande par e-mail →
                     </a>
                   )}
                   {!site.contact.whatsapp && !site.contact.email && (
-                    <p className="border border-bronze/40 p-6 text-sm leading-relaxed text-sand">
+                    <p className="rounded-2xl border border-bronze/40 bg-coal p-6 text-sm leading-relaxed text-sand">
                       La réservation en ligne ouvre très prochainement. En
                       attendant, copiez votre demande ci-dessous — elle est
                       prête à être envoyée dès que les coordonnées de contact
@@ -335,7 +335,7 @@ export function BookingFlow() {
               <button
                 type="button"
                 onClick={() => navigator.clipboard?.writeText(recap)}
-                className="label-text w-full border border-ivory/15 px-7 py-4 text-ivory/70 transition-colors hover:border-ivory/40 hover:text-ivory"
+                className="w-full rounded-full border border-ivory/15 px-7 py-4 font-semibold text-ivory/70 transition-colors hover:border-ivory/40 hover:text-ivory"
               >
                 Copier ma demande
               </button>
@@ -360,7 +360,7 @@ export function BookingFlow() {
             type="button"
             disabled={!canNext}
             onClick={() => setStep((s) => s + 1)}
-            className="label-text bg-bronze px-7 py-4 text-noir transition-all enabled:hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-30"
+            className="rounded-full bg-bronze px-7 py-3.5 font-semibold text-white transition-all enabled:hover:bg-bronze-deep disabled:cursor-not-allowed disabled:opacity-30"
           >
             Continuer →
           </button>

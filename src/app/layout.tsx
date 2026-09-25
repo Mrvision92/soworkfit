@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Anton, Instrument_Sans, Instrument_Serif } from "next/font/google";
+import { Instrument_Sans, Instrument_Serif } from "next/font/google";
 import { site } from "@/lib/site";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { StickyCTA } from "@/components/layout/StickyCTA";
+import { HashScroll } from "@/components/HashScroll";
 import "./globals.css";
-
-const anton = Anton({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-anton",
-  display: "swap",
-});
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
@@ -70,14 +64,15 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${anton.variable} ${instrumentSans.variable} ${instrumentSerif.variable}`}
+      className={`${instrumentSans.variable} ${instrumentSerif.variable}`}
     >
-      <body className="grain">
+      <body>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLd() }}
         />
         <Header />
+        <HashScroll />
         <main>{children}</main>
         <Footer />
         <StickyCTA />

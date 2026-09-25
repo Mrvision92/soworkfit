@@ -6,9 +6,13 @@ import { site } from "@/lib/site";
 export function FinalCTA() {
   return (
     <section className="relative isolate overflow-hidden border-t hairline">
-      <Halo className="pointer-events-none absolute left-1/2 top-1/2 w-[60rem] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-40" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 w-[60rem] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-40">
+        <div className="anim-spin-slow">
+          <Halo className="w-full" />
+        </div>
+      </div>
       <div className="container-sw py-28 text-center md:py-40">
-        <Reveal>
+        <Reveal punch>
           <p className="label-text text-bronze">Sans engagement</p>
           <h2 className="display-text mt-6 text-[clamp(2.6rem,8vw,5.6rem)]">
             Première séance

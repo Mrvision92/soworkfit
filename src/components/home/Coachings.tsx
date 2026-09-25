@@ -29,9 +29,14 @@ export function Coachings() {
             <Reveal key={c.id} delay={i * 0.05}>
               <Link
                 href={c.href}
-                className="group grid gap-x-8 gap-y-4 border-b hairline py-8 transition-colors duration-500 hover:bg-ash/60 md:grid-cols-[4rem_1fr_1fr_2.5rem] md:items-center md:py-10"
+                className="group relative grid gap-x-8 gap-y-4 border-b hairline py-8 transition-colors duration-500 hover:bg-ash/60 md:grid-cols-[4rem_1fr_1fr_2.5rem] md:items-center md:py-10"
               >
-                <span className="display-text text-2xl text-bronze/50 transition-colors duration-500 group-hover:text-bronze md:text-3xl">
+                {/* Barre bronze qui se déploie au survol */}
+                <span
+                  aria-hidden
+                  className="absolute left-0 top-0 h-full w-0.5 origin-top scale-y-0 bg-bronze transition-transform duration-300 group-hover:scale-y-100"
+                />
+                <span className="display-text text-2xl text-bronze/50 transition-all duration-500 group-hover:translate-x-2 group-hover:text-bronze md:text-3xl">
                   {c.num}
                 </span>
 

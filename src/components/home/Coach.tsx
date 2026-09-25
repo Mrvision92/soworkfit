@@ -3,6 +3,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { SitePhoto } from "@/components/ui/SitePhoto";
 import { Halo } from "@/components/ui/Marks";
 import { Button } from "@/components/ui/Button";
+import { CountUp } from "@/components/ui/CountUp";
 import { site } from "@/lib/site";
 
 export function Coach() {
@@ -18,8 +19,10 @@ export function Coach() {
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="aspect-[3/4]"
             />
-            <p className="display-text absolute -right-2 bottom-8 bg-noir px-4 py-2 text-2xl md:-right-6">
-              <span className="text-metal">{site.experienceYears} ans</span>
+            <p className="display-text absolute -right-2 bottom-8 rounded-full bg-coal px-5 py-2.5 text-2xl shadow-[0_6px_24px_rgba(29,29,31,0.12)] md:-right-6">
+              <span className="text-metal">
+                <CountUp to={site.experienceYears} suffix=" ans" />
+              </span>
             </p>
           </div>
         </Reveal>

@@ -14,9 +14,9 @@ export function Nutrition() {
         aria-hidden
         fill
         sizes="100vw"
-        className="object-cover opacity-35 [filter:saturate(0.75)_brightness(0.85)]"
+        className="anim-kenburns object-cover opacity-35 [filter:saturate(0.75)_brightness(0.85)]"
       />
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(11,10,8,0.85),rgba(11,10,8,0.55)_50%,rgba(11,10,8,0.9))]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(247,245,240,0.94),rgba(247,245,240,0.8)_50%,rgba(247,245,240,0.96))]" />
       <div className="pointer-events-none absolute inset-0 glow-bronze" />
       <div className="container-sw py-24 text-center md:py-32">
         <Reveal>
@@ -35,7 +35,7 @@ export function Nutrition() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <p className="mt-10 inline-block border border-bronze/50 px-6 py-4">
+          <p className="mt-10 inline-block rounded-full border border-bronze/40 bg-coal/80 px-6 py-4 backdrop-blur">
             <span className="label-text text-champagne">
               {site.offers.nutrition}
             </span>

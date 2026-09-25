@@ -36,10 +36,10 @@ export default function ResultatsPage() {
               Leurs mots, <span className="text-metal">pas les nôtres.</span>
             </h2>
           </Reveal>
-          <div className="mt-12 grid gap-px border hairline bg-ivory/8 md:grid-cols-3">
+          <div className="mt-12 grid gap-4 md:grid-cols-3">
             {[1, 2, 3].map((n, i) => (
-              <Reveal key={n} delay={i * 0.08} className="bg-coal">
-                <blockquote className="flex h-full min-h-56 flex-col justify-between p-7">
+              <Reveal key={n} delay={i * 0.08} className="h-full">
+                <blockquote className="flex h-full min-h-56 flex-col justify-between rounded-2xl bg-coal p-7 shadow-[0_2px_16px_rgba(29,29,31,0.05)]">
                   <p className="serif-accent text-lg text-ivory/30">
                     « Les premiers avis clients seront publiés ici. »
                   </p>

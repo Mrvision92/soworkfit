@@ -16,8 +16,8 @@ export function Chevron({ className = "w-4" }: { className?: string }) {
       <path d="M5 8l7 4 7-4" stroke="url(#chv)" strokeWidth="2" opacity="0.5" />
       <defs>
         <linearGradient id="chv" x1="0" y1="0" x2="24" y2="14">
-          <stop stopColor="#e6cfa3" />
-          <stop offset="1" stopColor="#9a7845" />
+          <stop stopColor="#bd8b4a" />
+          <stop offset="1" stopColor="#6b4e26" />
         </linearGradient>
       </defs>
     </svg>
@@ -48,9 +48,9 @@ export function Halo({ className = "" }: { className?: string }) {
       />
       <defs>
         <linearGradient id="halo" x1="0" y1="0" x2="600" y2="600">
-          <stop stopColor="#e6cfa3" stopOpacity="0.9" />
-          <stop offset="0.5" stopColor="#c29a5e" stopOpacity="0.35" />
-          <stop offset="1" stopColor="#c29a5e" stopOpacity="0" />
+          <stop stopColor="#a5793b" stopOpacity="0.8" />
+          <stop offset="0.5" stopColor="#a5793b" stopOpacity="0.3" />
+          <stop offset="1" stopColor="#a5793b" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

@@ -68,8 +68,8 @@ export const coachings: {
     audience: "Adultes — tous niveaux",
     hook: "Un programme construit pour vous, et uniquement pour vous.",
     points: [
-      "Perte de poids, transformation, remise en forme",
-      "Programme adapté à votre niveau réel",
+      "Perte de poids, prise de masse, remise en forme",
+      "Performance, rééducation, reprise du sport",
       "Suivi régulier et objectifs mesurables",
       "Programme alimentaire offert jusqu'à la fin de l'année",
     ],

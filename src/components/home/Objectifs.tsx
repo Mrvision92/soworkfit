@@ -4,11 +4,11 @@ import { Reveal } from "@/components/ui/Reveal";
 
 const objectifs = [
   { label: "Perdre du poids", href: "/coaching#prive" },
-  { label: "Me transformer physiquement", href: "/coaching#prive" },
-  { label: "Reprendre le sport", href: "/coaching#collectif" },
-  { label: "Améliorer ma condition", href: "/coaching#collectif" },
-  { label: "Faire progresser mon enfant", href: "/enfants" },
-  { label: "Progresser au football", href: "/football" },
+  { label: "Prise de masse", href: "/coaching#prive" },
+  { label: "Remise en forme", href: "/coaching#collectif" },
+  { label: "Performance", href: "/coaching#prive" },
+  { label: "Rééducation", href: "/coaching#prive" },
+  { label: "Spécifique football (7 à 16 ans)", href: "/football" },
 ];
 
 export function Objectifs() {
@@ -30,7 +30,7 @@ export function Objectifs() {
             <Reveal key={o.label} delay={i * 0.06}>
               <Link
                 href={o.href}
-                className="group flex items-center justify-between border hairline px-6 py-6 transition-all duration-300 hover:border-bronze/60 hover:bg-ash"
+                className="group flex items-center justify-between rounded-2xl bg-coal px-6 py-6 shadow-[0_2px_16px_rgba(29,29,31,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(29,29,31,0.09)]"
               >
                 <span className="display-text text-lg text-ivory transition-colors group-hover:text-champagne md:text-xl">
                   {o.label}

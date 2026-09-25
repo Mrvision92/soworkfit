@@ -76,19 +76,15 @@ export function Intro() {
             className="relative"
           >
             <div className="anim-float relative h-[min(64vmin,460px)] w-[min(64vmin,460px)]">
+              {/* Bords fondus en transparence directement dans le fichier
+                  (logo-fondu.webp) : aucune démarcation avec le fond. */}
               <Image
-                src="/brand/logo.webp"
+                src="/brand/logo-fondu.webp"
                 alt="SO WORKFIT"
                 fill
                 priority
                 sizes="(min-width: 768px) 460px, 64vw"
-                className="scale-[1.03] object-contain"
-              />
-
-              {/* Fondu des bords de l'image dans le noir du fond */}
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -inset-1 bg-[linear-gradient(180deg,#0a0908_0%,transparent_26%),linear-gradient(0deg,#0a0908_2%,transparent_20%),linear-gradient(90deg,#0a0908_0%,transparent_17%),linear-gradient(270deg,#0a0908_0%,transparent_17%)]"
+                className="object-contain"
               />
 
               {/* Anneau lumineux en orbite sur l'éclipse (fusion lumière) */}

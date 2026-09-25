@@ -76,10 +76,10 @@ export function Intro() {
             className="relative"
           >
             <div className="anim-float relative h-[min(64vmin,460px)] w-[min(64vmin,460px)]">
-              {/* Bords fondus en transparence directement dans le fichier
-                  (logo-fondu.webp) : aucune démarcation avec le fond. */}
+              {/* Logo détouré (fond fumée supprimé, transparence intégrée
+                  au fichier) : posé sur l'arrière-plan, sans démarcation. */}
               <Image
-                src="/brand/logo-fondu.webp"
+                src="/brand/logo-detoure.webp"
                 alt="SO WORKFIT"
                 fill
                 priority

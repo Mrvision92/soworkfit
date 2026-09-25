@@ -156,6 +156,28 @@ body {
   }
 }
 
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(-9px);
+  }
+  50% {
+    transform: translateY(11px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.06);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .anim-marquee {
     animation: marquee 28s linear infinite;
@@ -165,5 +187,15 @@ body {
   }
   .anim-spin-slow {
     animation: spin-slow 70s linear infinite;
+  }
+  /* Intro : logo flottant, anneau de lumière en orbite, halo pulsant */
+  .anim-float {
+    animation: float-y 7s ease-in-out infinite;
+  }
+  .anim-ring {
+    animation: spin-slow 14s linear infinite;
+  }
+  .anim-glow-pulse {
+    animation: glow-pulse 5.5s ease-in-out infinite;
   }
 }

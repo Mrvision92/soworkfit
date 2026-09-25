@@ -1,3 +1,4 @@
+import { Intro } from "@/components/Intro";
 import { Hero } from "@/components/home/Hero";
 import { Objectifs } from "@/components/home/Objectifs";
 import { Coachings } from "@/components/home/Coachings";
@@ -10,6 +11,7 @@ import { FinalCTA } from "@/components/home/FinalCTA";
 export default function Home() {
   return (
     <>
+      <Intro />
       <Hero />
       <Objectifs />
       <Coachings />

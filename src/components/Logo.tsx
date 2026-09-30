@@ -6,7 +6,14 @@ import { Chevron } from "./ui/Marks";
  * Le fichier logo officiel (raster) peut être déposé dans /public/brand/
  * et utilisé sur les supports où le fond noir intégré convient.
  */
-export function Logo({ className = "" }: { className?: string }) {
+export function Logo({
+  className = "",
+  light = false,
+}: {
+  className?: string;
+  /** Variante claire — posée sur le hero photo sombre. */
+  light?: boolean;
+}) {
   return (
     <Link
       href="/"
@@ -14,8 +21,15 @@ export function Logo({ className = "" }: { className?: string }) {
       className={`group flex items-center gap-3 ${className}`}
     >
       <Chevron className="w-5 transition-transform duration-300 group-hover:translate-y-0.5" />
-      <span className="display-text text-[1.05rem] tracking-[0.16em]">
-        SO&nbsp;<span className="text-metal">WORKFIT</span>
+      <span
+        className={`display-text text-[1.05rem] tracking-[0.16em] transition-colors duration-500 ${
+          light ? "text-white" : ""
+        }`}
+      >
+        SO&nbsp;
+        <span className={light ? "text-metal-light" : "text-metal"}>
+          WORKFIT
+        </span>
       </span>
     </Link>
   );

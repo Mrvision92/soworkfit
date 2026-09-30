@@ -103,6 +103,19 @@ body {
   font-weight: 400;
 }
 
+/* Dégradé champagne clair — pour un mot-clé posé sur photo sombre */
+@utility text-metal-light {
+  background-image: linear-gradient(
+    150deg,
+    #f0ddb4 0%,
+    #d9b478 45%,
+    #b98e4e 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 /* Dégradé bronze sur mot-clé (lisible sur fond clair) */
 @utility text-metal {
   background-image: linear-gradient(

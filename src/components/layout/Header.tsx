@@ -21,6 +21,9 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const reduce = useReducedMotion();
+  // Sur l'accueil, le header repose sur le hero photo sombre tant
+  // qu'on n'a pas scrollé : on passe en variante claire.
+  const dark = pathname === "/" && !scrolled && !open;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -47,7 +50,7 @@ export function Header() {
       }`}
     >
       <div className="container-sw flex h-16 items-center justify-between md:h-20">
-        <Logo className="relative z-50" />
+        <Logo className="relative z-50" light={dark} />
 
         <nav aria-label="Navigation principale" className="hidden lg:block">
           <ul className="flex items-center gap-6 xl:gap-8">
@@ -55,8 +58,12 @@ export function Header() {
               <li key={l.href}>
                 <Link
                   href={l.href}
-                  className={`label-text whitespace-nowrap transition-colors duration-300 hover:text-champagne ${
-                    pathname === l.href ? "text-bronze" : "text-ivory/70"
+                  className={`label-text whitespace-nowrap transition-colors duration-300 ${
+                    dark
+                      ? "text-white/80 hover:text-[#e6cfa3]"
+                      : pathname === l.href
+                        ? "text-bronze hover:text-champagne"
+                        : "text-ivory/70 hover:text-champagne"
                   }`}
                 >
                   {l.label}
@@ -83,14 +90,14 @@ export function Header() {
             className="relative z-50 flex h-11 w-11 flex-col items-center justify-center gap-1.5 lg:hidden"
           >
             <span
-              className={`h-px w-6 bg-ivory transition-transform duration-300 ${
-                open ? "translate-y-[3.5px] rotate-45" : ""
-              }`}
+              className={`h-px w-6 transition-all duration-300 ${
+                dark ? "bg-white" : "bg-ivory"
+              } ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
             />
             <span
-              className={`h-px w-6 bg-ivory transition-transform duration-300 ${
-                open ? "-translate-y-[3.5px] -rotate-45" : ""
-              }`}
+              className={`h-px w-6 transition-all duration-300 ${
+                dark ? "bg-white" : "bg-ivory"
+              } ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
             />
           </button>
         </div>

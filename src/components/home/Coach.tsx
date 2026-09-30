@@ -40,7 +40,7 @@ export function Coach() {
           />
           <Reveal delay={0.15}>
             <p className="mt-8 max-w-lg text-base leading-relaxed text-sand md:text-lg">
-              Depuis quinze ans, Soufiane accompagne des profils très
+              Depuis quinze ans, SO WORKFIT accompagne des profils très
               différents : des adultes qui reprennent le sport, des personnes
               en pleine transformation, des enfants qui découvrent l&apos;activité
               physique, de jeunes footballeurs qui veulent franchir un cap.

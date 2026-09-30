@@ -65,7 +65,7 @@ export function Hero() {
                 })}
             className="label-text text-bronze"
           >
-            {site.coach} — Coach sportif · {site.experienceYears} ans
+            {site.coach} — Coaching sportif · {site.experienceYears} ans
             d&apos;expérience
           </motion.p>
 

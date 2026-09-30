@@ -49,7 +49,6 @@ function jsonLd() {
     name: site.name,
     description,
     url: site.url,
-    founder: { "@type": "Person", name: site.coach, jobTitle: "Coach sportif" },
   };
   if (site.contact.phone) data.telephone = site.contact.phone;
   if (site.contact.email) data.email = site.contact.email;

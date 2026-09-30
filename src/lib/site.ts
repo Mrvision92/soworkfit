@@ -8,7 +8,8 @@
 
 export const site = {
   name: "SO WORKFIT",
-  coach: "Soufiane Benchekh",
+  /** Nom public — la marque plutôt que le nom du coach. */
+  coach: "SO WORKFIT",
   experienceYears: 15,
   tagline: "Un coaching qui s'adapte à votre objectif.",
 

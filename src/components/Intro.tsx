@@ -104,7 +104,7 @@ export function Intro() {
             {...appear(0.9)}
             className="label-text mt-4 text-[#d6b078]/80"
           >
-            Coaching sportif — Soufiane Benchekh
+            Coaching sportif — 15 ans d'expérience
           </motion.p>
 
           <motion.div {...appear(1.15)}>

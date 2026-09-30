@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: `À propos — ${site.coach}`,
-  description: `${site.coach}, coach sportif depuis ${site.experienceYears} ans. Coaching privé, collectif, enfants et préparation physique football.`,
+  description: `${site.coach}, coaching sportif depuis ${site.experienceYears} ans. Coaching privé, collectif, enfants et préparation physique football.`,
 };
 
 export default function AProposPage() {
@@ -44,7 +44,7 @@ export default function AProposPage() {
                 construire, suivre.
               </p>
               <p>
-                Soufiane a accompagné des profils très différents — des
+                SO WORKFIT a accompagné des profils très différents — des
                 adultes qui reprennent le sport après des années d&apos;arrêt,
                 des personnes engagées dans une vraie transformation physique,
                 des enfants qui découvrent le mouvement, de jeunes

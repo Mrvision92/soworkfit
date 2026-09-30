@@ -73,5 +73,6 @@ export const photos: Record<
   nutrition: {
     src: `${bp}/photos/nutrition.jpg`,
     alt: "Ingrédients frais et céréales sur une table en ardoise sombre",
+    pos: "18% center",
   },
 };

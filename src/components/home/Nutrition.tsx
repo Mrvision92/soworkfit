@@ -35,9 +35,11 @@ export function Nutrition() {
             </div>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Button href="/reserver">Réserver ma séance offerte</Button>
-              <Button href="/coaching" variant="ghost">
-                Voir les coachings
+              <Button href="/plan-alimentaire">
+                Recevoir votre plan alimentaire
+              </Button>
+              <Button href="/reserver" variant="ghost">
+                Réserver ma séance offerte
               </Button>
             </div>
           </Reveal>

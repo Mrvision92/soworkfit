@@ -31,6 +31,7 @@ export function PlanForm() {
     poids: "",
     age: "",
     taille: "",
+    note: "",
   });
 
   const isFoot = objectif === "Spécifique football";
@@ -55,6 +56,7 @@ export function PlanForm() {
       `Objectif : ${objectif ?? ""}`,
       ...(isFoot && poste ? [`Poste : ${poste}`] : []),
       `Âge : ${form.age} ans · Poids : ${form.poids} kg · Taille : ${form.taille} cm`,
+      ...(form.note.trim() ? [`Remarque : ${form.note.trim()}`] : []),
     ];
     return lines.join("\n");
   }, [form, objectif, poste, isFoot]);
@@ -208,6 +210,17 @@ export function PlanForm() {
               />
             </div>
 
+            {/* Remarque libre — quel que soit l'objectif */}
+            <p className="label-text mt-10 mb-4 text-bronze">
+              Une remarque pour le coach ? <span className="text-sand normal-case tracking-normal">(facultatif)</span>
+            </p>
+            <textarea
+              className={`${inputCls} min-h-28 resize-y`}
+              placeholder="Allergies, blessures, habitudes alimentaires, contraintes d'horaires…"
+              value={form.note}
+              onChange={(e) => setForm({ ...form, note: e.target.value })}
+            />
+
             <button
               type="submit"
               disabled={!canSubmit}
@@ -234,6 +247,9 @@ export function PlanForm() {
                   "Repères",
                   `${form.age} ans · ${form.poids} kg · ${form.taille} cm`,
                 ],
+                ...(form.note.trim()
+                  ? [["Remarque", form.note.trim()] as const]
+                  : []),
               ].map(([k, v]) => (
                 <div
                   key={k}

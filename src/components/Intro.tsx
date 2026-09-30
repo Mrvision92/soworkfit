@@ -7,6 +7,9 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 const KEY = "sw-intro-seen";
 const ease = [0.16, 1, 0.3, 1] as const;
 
+/** Préfixe de déploiement (GitHub Pages) — vide en local. */
+const bp = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 /**
  * Écran d'ouverture : logo flottant sur fond noir, éclipse illuminée
  * par un anneau de lumière en orbite. « Entrer » révèle le site.
@@ -79,7 +82,7 @@ export function Intro() {
               {/* Logo détouré (fond fumée supprimé, transparence intégrée
                   au fichier) : posé sur l'arrière-plan, sans démarcation. */}
               <Image
-                src="/brand/logo-detoure.webp"
+                src={`${bp}/brand/logo-detoure.webp`}
                 alt="SO WORKFIT"
                 fill
                 priority

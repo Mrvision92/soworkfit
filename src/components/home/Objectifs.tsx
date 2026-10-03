@@ -7,7 +7,7 @@ const objectifs = [
   { label: "Prise de masse", href: "/prise-de-masse" },
   { label: "Remise en forme", href: "/coaching#collectif" },
   { label: "Performance", href: "/performance" },
-  { label: "Rééducation", href: "/coaching#prive" },
+  { label: "Rééducation", href: "/reeducation" },
   { label: "Spécifique football (7 à 16 ans)", href: "/football" },
 ];
 

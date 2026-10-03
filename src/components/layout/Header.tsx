@@ -28,6 +28,7 @@ export function Header() {
     "/perte-de-poids",
     "/prise-de-masse",
     "/performance",
+    "/football",
   ];
   const dark = photoRoutes.includes(pathname) && !scrolled && !open;
 

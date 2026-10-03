@@ -25,21 +25,19 @@ const axes = [
 export default function FootballPage() {
   return (
     <>
-      <div className="relative">
-        <FieldLines />
-        <PageHeader
-          kicker="Préparation physique football · 7–15 ans"
-          title={
-            <>
-              Travaille ce qui fait
-              <br />
-              la différence{" "}
-              <span className="text-metal">sur le terrain.</span>
-            </>
-          }
-          lede="Un accompagnement individuel, complémentaire au club, pour aider le jeune joueur à progresser physiquement et techniquement."
-        />
-      </div>
+      <PageHeader
+        photo="footballHeader"
+        kicker="Préparation physique football · 7–15 ans"
+        title={
+          <>
+            Travaille ce qui fait
+            <br />
+            la différence{" "}
+            <span className="text-metal-light">sur le terrain.</span>
+          </>
+        }
+        lede="Un accompagnement individuel, complémentaire au club, pour aider le jeune joueur à progresser physiquement et techniquement."
+      />
 
       {/* Axes de travail — présentation type données de performance */}
       <section className="border-t hairline bg-coal">

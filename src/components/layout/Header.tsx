@@ -23,7 +23,12 @@ export function Header() {
   const reduce = useReducedMotion();
   // Sur les pages à en-tête photo sombre, le header passe en variante
   // claire tant qu'on n'a pas scrollé.
-  const photoRoutes = ["/", "/perte-de-poids", "/prise-de-masse"];
+  const photoRoutes = [
+    "/",
+    "/perte-de-poids",
+    "/prise-de-masse",
+    "/performance",
+  ];
   const dark = photoRoutes.includes(pathname) && !scrolled && !open;
 
   useEffect(() => {

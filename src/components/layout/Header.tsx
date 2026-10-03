@@ -21,9 +21,10 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const reduce = useReducedMotion();
-  // Sur l'accueil, le header repose sur le hero photo sombre tant
-  // qu'on n'a pas scrollé : on passe en variante claire.
-  const dark = pathname === "/" && !scrolled && !open;
+  // Sur les pages à en-tête photo sombre, le header passe en variante
+  // claire tant qu'on n'a pas scrollé.
+  const photoRoutes = ["/", "/coaching"];
+  const dark = photoRoutes.includes(pathname) && !scrolled && !open;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);

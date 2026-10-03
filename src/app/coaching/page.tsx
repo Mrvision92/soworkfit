@@ -16,12 +16,13 @@ export default function CoachingPage() {
   return (
     <>
       <PageHeader
+        photo="coachingHeader"
         kicker="Coaching adultes"
         title={
           <>
             Votre objectif.
             <br />
-            <span className="text-metal">Votre rythme.</span>
+            <span className="text-metal-light">Votre rythme.</span>
           </>
         }
         lede="Deux formats, une même méthode : partir de votre niveau réel et construire une progression mesurable."

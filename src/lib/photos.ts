@@ -22,7 +22,8 @@ export type PhotoKey =
   | "jeunesEdito"
   | "football"
   | "nutrition"
-  | "perteDePoids";
+  | "perteDePoids"
+  | "priseDeMasse";
 
 export const photos: Record<
   PhotoKey,
@@ -74,6 +75,11 @@ export const photos: Record<
   perteDePoids: {
     src: `${bp}/photos/perte-de-poids.webp`,
     alt: "Un homme face au miroir se projette dans sa transformation",
+    pos: "70% 25%",
+  },
+  priseDeMasse: {
+    src: `${bp}/photos/prise-de-masse.webp`,
+    alt: "Un homme face au miroir se projette dans un physique plus musclé",
     pos: "70% 25%",
   },
   nutrition: {

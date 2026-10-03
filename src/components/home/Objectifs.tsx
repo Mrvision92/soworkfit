@@ -4,7 +4,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 const objectifs = [
   { label: "Perdre du poids", href: "/perte-de-poids" },
-  { label: "Prise de masse", href: "/coaching#prive" },
+  { label: "Prise de masse", href: "/prise-de-masse" },
   { label: "Remise en forme", href: "/coaching#collectif" },
   { label: "Performance", href: "/coaching#prive" },
   { label: "Rééducation", href: "/coaching#prive" },

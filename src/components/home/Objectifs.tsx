@@ -3,7 +3,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 
 const objectifs = [
-  { label: "Perdre du poids", href: "/coaching#prive" },
+  { label: "Perdre du poids", href: "/perte-de-poids" },
   { label: "Prise de masse", href: "/coaching#prive" },
   { label: "Remise en forme", href: "/coaching#collectif" },
   { label: "Performance", href: "/coaching#prive" },

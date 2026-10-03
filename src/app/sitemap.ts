@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/reserver",
     "/plan-alimentaire",
+    "/perte-de-poids",
   ];
   return routes.map((r) => ({
     url: `${site.url}${r}`,

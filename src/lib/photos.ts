@@ -22,7 +22,7 @@ export type PhotoKey =
   | "jeunesEdito"
   | "football"
   | "nutrition"
-  | "coachingHeader";
+  | "perteDePoids";
 
 export const photos: Record<
   PhotoKey,
@@ -71,10 +71,10 @@ export const photos: Record<
     alt: "Jeunes footballeurs en plein duel devant le but",
     pos: "center 65%",
   },
-  coachingHeader: {
-    src: `${bp}/photos/coaching-header.webp`,
-    alt: "Athlète face au miroir, avant et après sa transformation",
-    pos: "center 20%",
+  perteDePoids: {
+    src: `${bp}/photos/perte-de-poids.webp`,
+    alt: "Un homme face au miroir se projette dans sa transformation",
+    pos: "70% 25%",
   },
   nutrition: {
     src: `${bp}/photos/nutrition.jpg`,

@@ -30,6 +30,7 @@ export function Header() {
     "/performance",
     "/football",
     "/reeducation",
+    "/remise-en-forme",
   ];
   const dark = photoRoutes.includes(pathname) && !scrolled && !open;
 

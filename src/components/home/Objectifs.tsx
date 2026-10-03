@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 const objectifs = [
   { label: "Perdre du poids", href: "/perte-de-poids" },
   { label: "Prise de masse", href: "/prise-de-masse" },
-  { label: "Remise en forme", href: "/coaching#collectif" },
+  { label: "Remise en forme", href: "/remise-en-forme" },
   { label: "Performance", href: "/performance" },
   { label: "Rééducation", href: "/reeducation" },
   { label: "Spécifique football (7 à 16 ans)", href: "/football" },

@@ -26,7 +26,8 @@ export type PhotoKey =
   | "priseDeMasse"
   | "performance"
   | "footballHeader"
-  | "reeducation";
+  | "reeducation"
+  | "remiseEnForme";
 
 export const photos: Record<
   PhotoKey,
@@ -99,6 +100,11 @@ export const photos: Record<
     src: `${bp}/photos/reeducation.webp`,
     alt: "Travail d'équilibre sur plateau de proprioception",
     pos: "70% center",
+  },
+  remiseEnForme: {
+    src: `${bp}/photos/remise-en-forme.webp`,
+    alt: "Renforcement au sol dans une salle lumineuse",
+    pos: "72% center",
   },
   nutrition: {
     src: `${bp}/photos/nutrition.jpg`,

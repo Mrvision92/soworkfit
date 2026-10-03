@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/prise-de-masse",
     "/performance",
     "/reeducation",
+    "/remise-en-forme",
   ];
   return routes.map((r) => ({
     url: `${site.url}${r}`,
